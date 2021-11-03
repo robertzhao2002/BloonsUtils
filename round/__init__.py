@@ -6,7 +6,7 @@ import csv
 
  Each element is a dictionary in this format:
  {
-     'RBE/Damage': int (the number of red bloons if the round was converted to all red bloons),
+     'RBE/Damage' : int (the number of red bloons if the round was converted to all red bloons),
      'Money from Bloons': int (the amount of money made from popping every bloon),
      'Money from Income' : int (the amount of money made in between rounds)
  }
@@ -15,7 +15,7 @@ import csv
 normal_rounds_data = []
 alternate_bloon_rounds_data = []
 
-with open("../data/rounds_normal.csv", newline="") as normal_rounds:
+with open("./data/rounds_normal.csv", newline="") as normal_rounds:
     file_reader = csv.reader(normal_rounds, delimiter=",", quotechar="|")
     headers = []
     
@@ -31,7 +31,7 @@ with open("../data/rounds_normal.csv", newline="") as normal_rounds:
                     normal_rounds_data[row_num-1][headers[header_num]] = int(row[header_num])
         row_num+=1
 
-with open("../data/rounds_abr.csv", newline="") as alternate_bloon_rounds:
+with open("./data/rounds_abr.csv", newline="") as alternate_bloon_rounds:
     file_reader = csv.reader(alternate_bloon_rounds, delimiter=",", quotechar="|")
     headers = []
     
@@ -47,5 +47,5 @@ with open("../data/rounds_abr.csv", newline="") as alternate_bloon_rounds:
                     alternate_bloon_rounds_data[row_num-1][headers[header_num]] = int(row[header_num])
         row_num+=1
 
-print(normal_rounds_data)
-print(alternate_bloon_rounds_data)
+# print(normal_rounds_data)
+# print(alternate_bloon_rounds_data)
