@@ -16,3 +16,6 @@ class Cumulative_Round:
             total_money+= self.__round_data[i]['RBE/Damage']
 
         return total_money
+
+class Banana_Farm:
+    pass

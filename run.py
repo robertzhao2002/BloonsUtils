@@ -1,5 +1,5 @@
 from round import normal_rounds_data
-from round.round_utilities import Cumulative_Round
+from round.utilities import Cumulative_Round
 
 ROUND = 10
 STARTING_CASH = 650
