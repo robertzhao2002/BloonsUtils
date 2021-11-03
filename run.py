@@ -7,3 +7,5 @@ STARTING_CASH = 650
 round_up_to = Cumulative_Round(final_round=ROUND, round_data=normal_rounds_data)
 
 print(round_up_to.total_damage())
+print(round_up_to.total_money_from_pops_and_income())
+print(round_up_to.total_money_from_pops())

@@ -9,12 +9,18 @@ class Cumulative_Round:
             total_damage+= self.__round_data[i]['RBE/Damage']
 
         return total_damage
-
+    
     def total_money_from_pops(self):
         total_money = 0
         for i in range(self.__final_round):
-            total_money+= self.__round_data[i]['RBE/Damage']
+            total_money+= self.__round_data[i]['Money from Bloons']
 
+        return total_money
+
+    def total_money_from_pops_and_income(self):
+        total_money = self.total_money_from_pops() # Start with money earned from pops
+        for i in range(self.__final_round):
+            total_money+= self.__round_data[i]['Money from Income']
         return total_money
 
 class Banana_Farm:
